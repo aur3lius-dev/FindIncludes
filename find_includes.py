@@ -101,7 +101,7 @@ def begin():
                         " references to include statements")
     parser.add_argument('-pp', '--print_separate', action='store_true',
                         help="Print file locations after listing discovered" +
-                        "header files")
+                        " header files")
     parser.add_argument("-d", "--directory", required=True)
     args = parser.parse_args()
     fi = FindIncludes(args.directory, args.ignore_sys, args.missing_headers)
