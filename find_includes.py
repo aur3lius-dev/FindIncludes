@@ -31,7 +31,7 @@ class FindIncludes:
                 ext = path.splitext(f)[1]
                 if ext.lower() in allowed_exts:
                     self.parse_file(d_path+"\\" + f)
-                    if ext in h_ext:
+                    if ext.lower() in h_ext:
                         self.header_files.add(f)
             self.dir_map[d_path] = f_names
 
