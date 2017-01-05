@@ -29,7 +29,7 @@ class FindIncludes:
         for d_path, _, f_names in walk(self.i_dir):
             for f in f_names:
                 ext = path.splitext(f)[1]
-                if ext in allowed_exts:
+                if ext.lower() in allowed_exts:
                     self.parse_file(d_path+"\\" + f)
                     if ext in h_ext:
                         self.header_files.add(f)
